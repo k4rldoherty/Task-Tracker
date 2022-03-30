@@ -1,0 +1,16 @@
+<footer>
+    <p style="margin:50px" *ngIf="hasRoute('/about')">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis dolor eget elementum malesuada. Proin eget massa ultrices diam placerat condimentum. Suspendisse eu tellus nisl. In molestie sagittis ipsum, eu pulvinar mauris egestas sed. Ut id mollis ipsum, sed tristique odio. Sed cursus nibh nec mauris tristique congue at id turpis. Sed vulputate a ex vel accumsan. Curabitur nec luctus metus. Nullam id egestas risus, eget tincidunt elit. Nulla a vehicula lectus, quis pellentesque risus. Fusce gravida dignissim ultrices. Quisque eu iaculis nunc, id finibus dolor. Nulla feugiat lacinia leo ac molestie. Nam fringilla urna et ex pretium condimentum. Suspendisse a est venenatis, interdum ante id, elementum enim. Maecenas condimentum tincidunt orci, nec mattis dolor pulvinar id.
+        Fusce dapibus massa ut mi blandit vestibulum. Curabitur eget lorem volutpat, convallis erat vel, venenatis tortor. Donec et nulla at libero lacinia viverra. Cras molestie nec lectus nec gravida. Fusce vitae ex mollis, porta felis nec, elementum leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sem erat, porta sit amet libero vitae, maximus congue mi. Suspendisse in consequat libero, at pellentesque elit. In dignissim, metus a semper vulputate, ante nisi pretium lorem, consectetur vulputate risus diam.
+        <br><br>Copyright Karl Doherty&copy;, not someone on YouTube 2022
+    </p>
+    <a *ngIf="!hasRoute('/about')"routerLink="/about">
+        About
+    </a>
+    <a *ngIf="hasRoute('/')" routerLink="/multi-view">
+        Click Here To See Different Options Of Viewing Your Tasks
+    </a><br>
+    <a *ngIf="!hasRoute('/')"routerLink="/">
+        Back To Home Page with Card View
+    </a>
+</footer>

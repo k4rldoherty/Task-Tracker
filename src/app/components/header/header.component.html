@@ -1,0 +1,12 @@
+<header>
+    <div class="views">
+        <button class="btn-view" (click)="router.navigate(['/'])">View 1</button>
+        <button class="btn-view" (click)="router.navigate(['/multi-view'])">View 2</button>
+    </div>
+    <h1>
+        {{ title }}
+    </h1>
+    <!-- Passed input and output (In terms of an emmiter) from parent componenet to child component -->
+    <app-button *ngIf="hasRoute('/') || hasRoute('/multi-view')" color="{{showAddTask ? 'red' : 'green'}}" text="{{showAddTask ? 'Close' : 'Add'}}" (btnClick)="toggleAddTask()">
+    </app-button>
+</header>

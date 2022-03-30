@@ -1,0 +1,26 @@
+<dx-drop-down-box
+    [(value)]="selectedView"
+    [(opened)]="isDropDown"
+    [dataSource]="viewOptions">
+    <dx-list 
+        [dataSource]="viewOptions"
+        selectionMode="single"
+        (onSelectionChanged)="changeDropdownValue($event)">
+    </dx-list>
+</dx-drop-down-box>
+
+
+<!-- <div class="tabpage">
+    <dx-tab-panel>
+        <dxi-item title="View 1" icon="floppy">
+            <app-tasks></app-tasks>
+        </dxi-item>
+        <dxi-item title="View 2" icon="floppy">
+            <app-datagrid ></app-datagrid>
+        </dxi-item>
+    </dx-tab-panel>
+</div> -->
+
+<app-tasks *ngIf="selectedView === 'Card-View'"></app-tasks>
+<app-datagrid *ngIf="selectedView === 'Grid-View'"></app-datagrid>
+
